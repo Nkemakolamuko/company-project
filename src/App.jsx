@@ -1,12 +1,16 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-
   return (
     <>
-     <h3 className='text-red-500'>Hello World</h3>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
