@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { nextState, prevState } from "../utils/herofunctions";
+import { Link } from "react-router-dom";
 
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -60,13 +61,13 @@ const Carousel = ({ slides }) => {
               >
                 <h2 className="text-3xl font-bold mb-2">{slide.title}</h2>
                 <p className="mb-4">{slide.desc}</p>
-                <a
-                  href={`/learn-more/${slide.id}`}
+                <Link
+                  to={`/learn-more/${slide.id}`}
                   className="flex items-center gap-2 w-fit bg-[#E8B335]/80 hover:bg-[#E8B335] text-white font-semibold py-2 px-4 rounded hover:rounded-full transition-all duration-300"
                 >
                   <span>Learn more</span>
                   <FaAngleRight className="w-5 h-5" />
-                </a>
+                </Link>
               </div>
             </div>
           );

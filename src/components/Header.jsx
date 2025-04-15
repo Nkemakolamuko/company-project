@@ -39,14 +39,14 @@ const Header = () => {
             <a href="#" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               Home
             </a>
-            <a href="#products" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
-              Products
-            </a>
             <a href="#about" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               About Us
             </a>
             <a href="#sub" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               Sub-Companies
+            </a>
+            <a href="#team" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
+              Our Team
             </a>
             <a href="#contact" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               Contact Us
