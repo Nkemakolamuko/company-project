@@ -27,6 +27,10 @@ const TeamSection = () => {
                 <FaLinkedin />
               </a>
             </div>
+            <br />
+            <hr className="text-gray-200" />
+            <br />
+            <hr className="text-gray-200" />
           </div>
         ))}
       </div>

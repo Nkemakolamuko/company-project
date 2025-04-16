@@ -1,53 +1,64 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
-
   const [name, setName] = useState("");
-
   const [dailyNewsletter, setDailyNewsletter] = useState(false);
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [submitStatus, setSubmitStatus] = useState(null);
-
-  // Replace with your actual Formspree form ID
+  const sectionRef = useRef(null);
 
   const formspreeEndpoint = "https://formspree.io/f/xrbpdndl";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = sectionRef.current;
+      if (!section) return;
+      
+      const rect = section.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+      
+      if (isVisible) {
+        // When the section is in view, apply fixed background
+        section.classList.add('bg-fixed');
+      } else {
+        // When scrolled past, remove fixed background
+        section.classList.remove('bg-fixed');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
     try {
       const response = await fetch(formspreeEndpoint, {
         method: "POST",
-
         headers: {
           Accept: "application/json",
-
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           name,
-
           email,
-
           dailyNewsletter,
         }),
       });
 
       if (response.ok) {
         setSubmitStatus("success");
-
         setName("");
-
         setEmail("");
-
         setDailyNewsletter(false);
-
       } else {
         setSubmitStatus("error");
       }
@@ -62,11 +73,11 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="max-w-full relative mx-auto bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3c2xldHRlcnxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center bg-no-repeat px-8 py-20 min-h-[400px]">
+    <div 
+      ref={sectionRef}
+      className="max-w-full relative mx-auto bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3c2xldHRlcnxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center bg-no-repeat px-8 py-20 min-h-[400px] transition-all duration-300"
+    >
       <div className="absolute top-0 left-0 h-full w-full bg-[#043A53] opacity-70 z-10"></div>
-      {/* <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-white">Minimal Newsletter</h2>
-      </div> */}
 
       <div className="relative z-20 bg-white p-6 rounded shadow-md max-w-3xl mx-auto flex flex-col">
         <div className="flex items-center mb-4">
@@ -178,6 +189,13 @@ export default function Newsletter() {
           </div>
         </form>
       </div>
+      
+      {/* Add custom styles for the fixed background effect */}
+      <style jsx global>{`
+        .bg-fixed {
+          background-attachment: fixed;
+        }
+      `}</style>
     </div>
   );
 }
