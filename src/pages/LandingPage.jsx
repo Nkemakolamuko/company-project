@@ -5,6 +5,7 @@ import CompanyInfo from "../components/CompanyInfo";
 import OurServices from "../components/OurServices";
 import TeamSection from "../components/TeamSection";
 import Divider from "../components/Divider";
+import Newsletter from "../components/Newsletter";
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <OurServices />
       <Divider />
       <TeamSection />
+      <Newsletter />
     </div>
   );
 };
