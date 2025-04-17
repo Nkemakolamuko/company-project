@@ -1,5 +1,8 @@
 import React from "react";
 import { MapPin, Mail, Phone, Printer } from "lucide-react";
+import { FaFacebook } from "react-icons/fa6";
+import { BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -9,24 +12,29 @@ export default function Footer() {
         <p className="text-sm">Get connected with us on social networks!</p>
         <div className="flex space-x-4">
           <a href="#" className="hover:text-gray-200">
-            <i className="fab fa-facebook-f"></i>
-            <span className="sr-only">Facebook</span>
+            {/* <i className="fab fa-facebook-f"></i> */}
+            <FaFacebook />
+            {/* <span className="sr-only">Facebook</span> */}
           </a>
           <a href="#" className="hover:text-gray-200">
-            <i className="fab fa-twitter"></i>
-            <span className="sr-only">Twitter</span>
+            {/* <i className="fab fa-twitter"></i> */}
+            {/* <span className="sr-only">Twitter</span> */}
+            <BsTwitterX />
           </a>
           <a href="#" className="hover:text-gray-200">
-            <i className="fab fa-google-plus-g"></i>
-            <span className="sr-only">Google+</span>
+            {/* <i className="fab fa-google-plus-g"></i> */}
+            {/* <span className="sr-only">Google+</span> */}
+            <MdMarkEmailRead />
           </a>
           <a href="#" className="hover:text-gray-200">
-            <i className="fab fa-linkedin-in"></i>
-            <span className="sr-only">LinkedIn</span>
+            {/* <i className="fab fa-linkedin-in"></i> */}
+            {/* <span className="sr-only">LinkedIn</span> */}
+            <BsLinkedin />
           </a>
           <a href="#" className="hover:text-gray-200">
-            <i className="fab fa-instagram"></i>
-            <span className="sr-only">Instagram</span>
+            {/* <i className="fab fa-instagram"></i> */}
+            {/* <span className="sr-only">Instagram</span> */}
+            <BsInstagram />
           </a>
         </div>
       </div>
