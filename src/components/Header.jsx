@@ -36,7 +36,7 @@ const Header = () => {
         >
           <a href="/" className="text-xl py-3 px-2 md:pl-16 font-bold text-blue-600">Company Logo</a>
           <nav className="space-x-6 text-gray-700 pl-4 md:pr-14">
-            <a href="#" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
+            <a href="/" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               Home
             </a>
             <a href="#about" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
