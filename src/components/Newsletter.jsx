@@ -156,7 +156,7 @@ export default function Newsletter() {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded flex items-center"
+              className="bg-[#043A53] hover:bg-[#032c3f] cursor-pointer text-white py-2 px-6 rounded flex items-center"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
