@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeroSection from "../components/subcompanies/HeroSection";
 import Tabs from "../components/subcompanies/Tabs";
 import ProjectGrid from "../components/subcompanies/ProjectGrid";
@@ -7,6 +7,8 @@ import slides from "../db/slidesDb";
 import Header from "../components/Header";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import ProjectGrids from "../components/subcompanies/ProjectGrids";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Subcompanies() {
   const { id } = useParams();
@@ -27,6 +29,7 @@ export default function Subcompanies() {
   }, [id]);
 
   const handleTabClick = (tabTitle) => {
+    window.scrollTo({ top: 500, behavior: "smooth" });
     setActiveTab(tabTitle);
     if (tabTitle === "All") {
       setFilteredItems(slides);
@@ -38,6 +41,7 @@ export default function Subcompanies() {
   };
 
   const handleCardClick = (id) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     const selected = slides.find((item) => item.id === id);
     if (selected) {
       setActiveItem(selected);
@@ -46,11 +50,17 @@ export default function Subcompanies() {
     }
   };
 
+  // I added these to scroll to the top when we come to this page
+  const topRef = useRef(null);
+  useEffect(() => {
+    topRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [id]);
+
   return (
     <>
       <Header />
 
-      <div className="bg-gray-50">
+      <div className="bg-white" ref={topRef}>
         {activeItem && (
           <>
             <HeroSection
@@ -64,6 +74,7 @@ export default function Subcompanies() {
                   ? "We've made it for many times and grown many businesses. Many more to come."
                   : activeItem?.desc
               }
+              img={activeItem?.img}
             />
 
             <Tabs
@@ -71,8 +82,27 @@ export default function Subcompanies() {
               activeTab={activeTab}
               onTabClick={handleTabClick}
             />
-
-            <ProjectGrid items={filteredItems} setId={handleCardClick} />
+            <AnimatePresence mode="wait">
+              {activeTab === "All" ? (
+                <motion.div
+                  key="grid"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <ProjectGrid items={filteredItems} setId={handleCardClick} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="detail"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <ProjectGrids item={activeItem} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </>
         )}
       </div>
