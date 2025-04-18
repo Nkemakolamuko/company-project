@@ -58,7 +58,6 @@ export default function Subcompanies() {
 
   return (
     <>
-      <Header />
 
       <div className="bg-white" ref={topRef}>
         {activeItem && (
