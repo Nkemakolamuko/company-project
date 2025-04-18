@@ -48,9 +48,12 @@ const Header = () => {
             <a href="#team" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               Our Team
             </a>
-            <a href="#contact" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
+            <NavLink 
+              to="/contact" 
+              className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4"
+            >
               Contact Us
-            </a>
+            </NavLink>
           </nav>
         </div>
       </Headroom>
