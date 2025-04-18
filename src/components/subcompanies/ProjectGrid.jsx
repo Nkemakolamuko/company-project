@@ -8,7 +8,7 @@ export default function ProjectGrid({ items, setId }) {
         <div
           onClick={() => setId(item.id)}
           key={item.id}
-          className="bg-white rounded shadow overflow-hidden"
+          className="bg-white rounded shadow hover:shadow-md overflow-hidden cursor-pointer transition-all duration-300"
         >
           <img
             src={item.img}
