@@ -75,7 +75,7 @@ export default function Newsletter() {
   return (
     <div 
       ref={sectionRef}
-      className="max-w-full relative mx-auto bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3c2xldHRlcnxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center bg-no-repeat px-8 py-20 min-h-[400px] transition-all duration-300"
+      className="max-w-full relative mx-auto bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3c2xldHRlcnxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center bg-no-repeat px-4 md:px-8 py-20 min-h-[400px] transition-all duration-300"
     >
       <div className="absolute top-0 left-0 h-full w-full bg-[#043A53] opacity-70 z-10"></div>
 
