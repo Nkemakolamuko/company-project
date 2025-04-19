@@ -38,7 +38,7 @@ const Header = () => {
 
       <Headroom style={{ zIndex: 50 }} wrapperStyle={{ position: "relative" }}>
         <div className="bg-white shadow flex justify-between items-center">
-          <a href="/" className="text-xl py-3 px-2 md:pl-16 font-bold text-blue-600">
+          <a href="/" className="text-xl py-3 px-4 md:pl-16 font-bold text-blue-600">
             Company Logo
           </a>
           
