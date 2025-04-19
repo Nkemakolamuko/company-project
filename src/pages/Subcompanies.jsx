@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import HeroSection from "../components/subcompanies/HeroSection";
 import Tabs from "../components/subcompanies/Tabs";
@@ -105,6 +105,13 @@ export default function Subcompanies() {
           </>
         )}
       </div>
+
+<div className="w-full flex items-center justify-center mt-4 mb-8">
+
+      <Link to={'/'} className="cursor-pointer border border-[#043A53] hover:bg-[#043A53] hover:text-white rounded-full px-8 py-2 text-[#043A53] w-fit transition-all duration-300">
+        Go back Home
+      </Link>
+</div>
 
       <Newsletter />
       <Footer />
