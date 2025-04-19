@@ -9,8 +9,8 @@ const Contact = () => {
       {" "}
       {/* Added pt-[120px] for header space - I removed it, I don't think it's good visually though */}
       {/* Contact Section */}
-      <div className="w-full py-16 relative">
-        <div className="text-center mb-16">
+      <div className="w-full pb-8 md:py-16 relative">
+        <div className="text-center pb-8 pt-8 md:pb-16 bg-white md:bg-gray-50">
           <h1 className="text-4xl font-bold mb-4">We are here to help</h1>
           <p className="text-gray-600 max-w-xl mx-auto">
             Contact us if you have any questions about our company. Our best
@@ -18,7 +18,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16 mx-16">
+        <div className="grid md:grid-cols-3 gap-8 mt-4 md:mt-0 mb-8 md:mb-16 mx-4 md:mx-16">
           {/* Email Card */}
           <div className="bg-white p-8 rounded-lg shadow flex flex-col justify-between">
             <div className="mb-4 w-fit p-6 text-[#043A53] rounded-full bg-[#043A53]/10">
