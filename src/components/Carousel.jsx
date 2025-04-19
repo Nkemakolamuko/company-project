@@ -55,7 +55,7 @@ const Carousel = ({ slides }) => {
                 className="w-full h-full object-cover"
               />
               <div
-                className={`absolute bottom-10 left-8 md:left-24 bg-[#043A53]/70 p-6 rounded-md max-w-md text-white z-20 transition-opacity duration-500 ${
+                className={`absolute bottom-10 mx-4 md:mx-0 left-0 md:left-24 bg-[#043A53]/70 p-6 rounded-md max-w-md text-white z-20 transition-opacity duration-500 ${
                   isTransitioning ? "opacity-0" : "opacity-100"
                 }`}
               >
@@ -73,17 +73,17 @@ const Carousel = ({ slides }) => {
           );
         })}
       </div>
-      <div className="absolute inset-0 flex items-center group justify-between px-2 md:px-8 pointer-events-none z-30">
+      <div className="absolute inset-0 flex items-center sm:group justify-between px-2 md:px-8 pointer-events-none z-30">
         <button
           onClick={() => handleSlideChange("prev")}
-          className="bg-black/50 px-4 py-4 md:text-3xl hover:bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-md cursor-pointer text-white pointer-events-auto"
+          className="bg-black/50 px-4 py-4 md:text-3xl sm:hover:bg-black/80 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 rounded-md cursor-pointer text-white pointer-events-auto"
           disabled={isTransitioning}
         >
           <FaAngleLeft />
         </button>
         <button
           onClick={() => handleSlideChange("next")}
-          className="bg-black/50 px-4 py-4 md:text-3xl hover:bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-md cursor-pointer text-white pointer-events-auto"
+          className="bg-black/50 px-4 py-4 md:text-3xl sm:hover:bg-black/80 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 rounded-md cursor-pointer text-white pointer-events-auto"
           disabled={isTransitioning}
         >
           <FaAngleRight />
