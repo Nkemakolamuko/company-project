@@ -9,31 +9,21 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Social Media Banner */}
       <div className="bg-indigo-600 py-3 px-6 flex justify-between items-center">
-        <p className="text-sm">Get connected with us on social networks!</p>
+        <p className="text-xs md:text-sm">Get connected with us on social networks!</p>
         <div className="flex space-x-4">
           <a href="#" className="hover:text-gray-200">
-            {/* <i className="fab fa-facebook-f"></i> */}
             <FaFacebook />
-            {/* <span className="sr-only">Facebook</span> */}
           </a>
           <a href="#" className="hover:text-gray-200">
-            {/* <i className="fab fa-twitter"></i> */}
-            {/* <span className="sr-only">Twitter</span> */}
             <BsTwitterX />
           </a>
           <a href="#" className="hover:text-gray-200">
-            {/* <i className="fab fa-google-plus-g"></i> */}
-            {/* <span className="sr-only">Google+</span> */}
             <MdMarkEmailRead />
           </a>
           <a href="#" className="hover:text-gray-200">
-            {/* <i className="fab fa-linkedin-in"></i> */}
-            {/* <span className="sr-only">LinkedIn</span> */}
             <BsLinkedin />
           </a>
           <a href="#" className="hover:text-gray-200">
-            {/* <i className="fab fa-instagram"></i> */}
-            {/* <span className="sr-only">Instagram</span> */}
             <BsInstagram />
           </a>
         </div>
@@ -46,8 +36,7 @@ export default function Footer() {
           <div>
             <h5 className="text-lg font-bold mb-4">COMPANY NAME</h5>
             <p className="text-sm text-gray-400 mb-4">
-              Here you can use rows and columns to organize your footer content.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima illum ut sunt earum, aut laudantium. Lorem ipsum dolor sit amet.
             </p>
           </div>
 
@@ -83,17 +72,26 @@ export default function Footer() {
             <h5 className="text-lg font-bold mb-4">USEFUL LINKS</h5>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-sm text-gray-400 hover:text-white">
+                <a
+                  href="#about"
+                  className="text-sm text-gray-400 hover:text-white"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#sub" className="text-sm text-gray-400 hover:text-white">
+                <a
+                  href="#sub"
+                  className="text-sm text-gray-400 hover:text-white"
+                >
                   Sub Companies
                 </a>
               </li>
               <li>
-                <a href="#team" className="text-sm text-gray-400 hover:text-white">
+                <a
+                  href="#team"
+                  className="text-sm text-gray-400 hover:text-white"
+                >
                   Our Team
                 </a>
               </li>
