@@ -36,7 +36,7 @@ const Carousel = ({ slides }) => {
   };
 
   return (
-    <div className="relative overflow-hidden h-screen max-h-[88vh] w-full group">
+    <div className="relative overflow-hidden h-[80vh] md:h-screen md:max-h-[88vh] w-full group">
       <div className="flex h-full overflow-hidden">
         {slides.map((slide, index) => {
           // Calculate if this slide is active
@@ -73,7 +73,7 @@ const Carousel = ({ slides }) => {
           );
         })}
       </div>
-      <div className="absolute inset-0 flex items-center sm:group justify-between px-2 md:px-8 pointer-events-none z-30">
+      <div className="absolute h-[70%] md:h-full inset-0 flex items-center sm:group justify-between px-2 md:px-8 pointer-events-none z-30">
         <button
           onClick={() => handleSlideChange("prev")}
           className="bg-black/50 px-4 py-4 md:text-3xl sm:hover:bg-black/80 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 rounded-md cursor-pointer text-white pointer-events-auto"
