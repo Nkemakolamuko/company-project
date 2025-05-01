@@ -11,8 +11,8 @@ const Contact = () => {
       {/* Contact Section */}
       <div className="w-full pb-8 md:py-16 relative">
         <div className="text-center pb-8 pt-8 md:pb-16 bg-white md:bg-gray-50">
-          <h1 className="text-4xl font-bold mb-4">We are here to help</h1>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <h1 className="text-4xl text-[#002536] font-semibold mb-4">We are here to help</h1>
+          <p className="text-gray-600 max-w-xl mx-auto px-4">
             Contact us if you have any questions about our company. Our best
             team will provide your answer within a few hours.
           </p>
@@ -20,11 +20,11 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mt-4 md:mt-0 mb-8 md:mb-16 mx-4 md:mx-16">
           {/* Email Card */}
-          <div className="bg-white p-8 rounded-lg shadow flex flex-col justify-between">
+          <div className="bg-white p-4 sm:p-8 rounded-lg shadow flex flex-col justify-between">
             <div className="mb-4 w-fit p-6 text-[#043A53] rounded-full bg-[#043A53]/10">
               <MdEmail className="w-8 h-8" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+            <h3 className="text-xl font-semibold mb-2 text-[#002536]">Email Us</h3>
             <p className="text-gray-600 text-sm mb-4">
               Ask anything by emailing us and we'll respond within a few days.
             </p>
@@ -37,17 +37,17 @@ const Contact = () => {
           </div>
 
           {/* Location Card */}
-          <div className="bg-white p-8 rounded-lg shadow flex flex-col justify-between">
+          <div className="bg-white p-4 sm:p-8 rounded-lg shadow flex flex-col justify-between">
             <div className="mb-4 w-fit text-yellow-600 rounded-full p-6 bg-yellow-600/10">
               <MapPin />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Locate Us</h3>
+            <h3 className="text-xl font-semibold mb-2 text-[#002536]">Locate Us</h3>
             <p className="text-gray-600 text-sm mb-4">
               You can meet us at our office and discuss the details of your
               question.
             </p>
             <a
-              href="#map"
+              href="https://maps.app.goo.gl/yRxxiVmU7ui9e92f8"
               className="text-[#043A53] hover:underline font-semibold"
             >
               Get directions →
@@ -55,19 +55,19 @@ const Contact = () => {
           </div>
 
           {/* Phone Card */}
-          <div className="bg-white p-8 rounded-lg shadow flex flex-col justify-between">
+          <div className="bg-white p-4 sm:p-8 rounded-lg shadow flex flex-col justify-between">
             <div className="mb-4 w-fit p-6 text-[#043A53] rounded-full bg-[#043A53]/10">
               <Phone />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Call Us Any Time</h3>
+            <h3 className="text-xl font-semibold mb-2 text-[#002536]">Call Us Any Time</h3>
             <p className="text-gray-600 text-sm mb-4">
               Call us if your question requires an immediate response.
             </p>
             <a
-              href="tel:+250795019913"
+              href="tel:+250788590092"
               className="text-[#043A53] hover:underline font-semibold"
             >
-              +250 79 501 9913 →
+              +250 78 859 0092 →
             </a>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Contact = () => {
         <div className="w-full bg-white py-16 px-4 md:px-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
-              <h1 className="text-4xl font-bold mb-4">Leave us a message</h1>
+              <h1 className="text-4xl font-bold mb-4 text-[#002536]">Leave us a message</h1>
               <p className="text-gray-600 max-w-xl mx-auto">
                 Contact us if you have any questions about our company. Our best
                 team will provide your answer within a few hours.
@@ -170,14 +170,14 @@ const Contact = () => {
           className="mt-16 h-[500px] rounded overflow-hidden shadow"
         >
           <iframe
-            title="Company Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31900.11898869484!2d30.088447115993866!3d-1.9470228829192051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca774626f129f%3A0x6226e99fffd9a3ed!2sRemera%2C%20Kigali!5e0!3m2!1sen!2srw!4v1744934176015!5m2!1sen!2srw"
+            title="Follow the map to find us"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63800.75518656384!2d30.11565989428948!3d-1.9333114693401698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sISANO%20HOUSE%20NEAR%20GAKINJIRO%20MARKET%20GASABO%20KACYIRU!5e0!3m2!1sen!2srw!4v1746125842053!5m2!1sen!2srw"
             width="100%"
             height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
+            style={{border: 0}}
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
