@@ -7,7 +7,7 @@ const TeamSection = () => {
   return (
     <section className="py-16 px-4 md:px-16 bg-white" id="team">
       <Title text1={'OUR'} text2={'TEAM'} />
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-8">
         {team.map((member) => (
           <div key={member.id} className="text-center">
             <div className="h-52 overflow-hidden mb-4 shadow-md">

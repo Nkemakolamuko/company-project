@@ -149,7 +149,7 @@ export default function Newsletter() {
             />
 
             <label htmlFor="dailyNewsletter" className="text-gray-600">
-              Daily Newsletter To Stay Updated
+              Weekly Newsletter To Stay Updated
             </label>
           </div>
 

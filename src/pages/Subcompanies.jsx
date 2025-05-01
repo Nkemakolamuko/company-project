@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import HeroSection from "../components/subcompanies/HeroSection";
 import Tabs from "../components/subcompanies/Tabs";
@@ -50,6 +50,12 @@ export default function Subcompanies() {
     }
   };
 
+  const handleLocationClick = () => {
+    const selected = slides.find((item) => item.id === id);
+    const navigate = useNavigate(selected.location);
+    window.location.pathname = navigate;
+  };
+
   // I added these to scroll to the top when we come to this page
   const topRef = useRef(null);
   useEffect(() => {
@@ -58,7 +64,6 @@ export default function Subcompanies() {
 
   return (
     <>
-
       <div className="bg-white" ref={topRef}>
         {activeItem && (
           <>
@@ -98,7 +103,10 @@ export default function Subcompanies() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <ProjectGrids item={activeItem} />
+                  <ProjectGrids
+                    item={activeItem}
+                    handleLocationCLick={handleLocationClick}
+                  />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -106,12 +114,14 @@ export default function Subcompanies() {
         )}
       </div>
 
-<div className="w-full flex items-center justify-center mt-4 mb-8">
-
-      <Link to={'/'} className="cursor-pointer border border-[#043A53] hover:bg-[#043A53] hover:text-white rounded-full px-8 py-2 text-[#043A53] w-fit transition-all duration-300">
-        Go back Home
-      </Link>
-</div>
+      <div className="w-full flex items-center justify-center mt-4 mb-8">
+        <Link
+          to={"/"}
+          className="cursor-pointer border border-[#043A53] hover:bg-[#043A53] hover:text-white rounded-full px-8 py-2 text-[#043A53] w-fit transition-all duration-300"
+        >
+          Go back Home
+        </Link>
+      </div>
 
       <Newsletter />
       <Footer />

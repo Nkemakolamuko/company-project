@@ -63,7 +63,7 @@ const Carousel = ({ slides }) => {
                 <p className="mb-4">{slide.desc}</p>
                 <Link
                   to={`/learn-more/${slide.id}`}
-                  className="flex items-center gap-2 w-fit bg-[#E8B335]/80 hover:bg-[#E8B335] text-white font-semibold py-2 px-4 rounded hover:rounded-full transition-all duration-300"
+                  className="flex items-center gap-2 w-fit bg-[#E8B335] sm:bg-[#E8B335]/80 hover:bg-[#E8B335] text-white font-semibold py-2 px-4 rounded-full sm:rounded hover:rounded-full transition-all duration-300"
                 >
                   <span>Learn more</span>
                   <FaAngleRight className="w-5 h-5" />

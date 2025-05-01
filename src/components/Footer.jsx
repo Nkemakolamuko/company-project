@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h5 className="text-lg font-bold mb-4">COMPANY NAME</h5>
+            <h5 className="text-lg font-bold mb-4">PARENT SOLUTION HARDWARE</h5>
             <p className="text-sm text-gray-400 mb-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima illum ut sunt earum, aut laudantium. Lorem ipsum dolor sit amet.
             </p>
@@ -110,20 +110,20 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
                 <span className="text-sm text-gray-400">
-                  Gasabo, Kigali City, Rwanda
+                  ISANO HOUSE, NEAR GAKINJIRO MARKET/GASABO/KACYITU
                 </span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-sm text-gray-400">info@example.com</span>
+                <a href="mailto:parentssolutionhardware@gmail.com" className="text-sm text-gray-400">parentssolutionhardware@gmail.com</a>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-sm text-gray-400">+250 795019913</span>
+                <a href="tel:+250788568312" className="text-sm text-gray-400">+250 788568312</a>
               </li>
               <li className="flex items-center">
                 <Printer size={18} className="mr-2 flex-shrink-0" />
-                <span className="text-sm text-gray-400">+250 795019913</span>
+                <a href="tel:+250788590092" className="text-sm text-gray-400">+250 788590092</a>
               </li>
             </ul>
           </div>
@@ -138,7 +138,7 @@ export default function Footer() {
             href="https://MDBootstrap.com"
             className="text-gray-400 hover:text-white"
           >
-            Company Name
+            PARENT SOLUTION HARDWARE
           </a>
         </p>
       </div>
