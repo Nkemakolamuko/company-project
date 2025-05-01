@@ -36,7 +36,7 @@ export default function Footer() {
           <div>
             <h5 className="text-lg font-bold mb-4">PARENT SOLUTION HARDWARE</h5>
             <p className="text-sm text-gray-400 mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima illum ut sunt earum, aut laudantium. Lorem ipsum dolor sit amet.
+            Parent Solution Hardware is a trusted supplier of quality hardware materials and paper products in Rwanda. We serve individuals, businesses, and organizations with a wide selection of building supplies, tools, and stationery, ensuring reliable products and excellent customer service for every project and office need.
             </p>
           </div>
 

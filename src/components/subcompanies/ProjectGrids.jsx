@@ -12,9 +12,9 @@ export default function ProjectGrids({ item, handleLocationCLick }) {
         />
         <div
           onClick={handleLocationCLick}
-          className="absolute z-[99] right-4 top-2 bg-black/50 text-2xl active:scale-95 transition-all p-2 rounded-md text-yellow-500"
+          className="absolute z-[99] flex items-center cursor-pointer right-2 top-2 bg-black/60 text-2xl active:scale-95 transition-all p-2 rounded-md text-yellow-500"
         >
-          <FaLocationDot />
+          <FaLocationDot /> <span className="inline-block text-white text-sm font-semibold">Locate Office</span>
         </div>
       </div>
       <h2 className="text-3xl font-bold text-gray-900 mb-4">{item.title}</h2>
