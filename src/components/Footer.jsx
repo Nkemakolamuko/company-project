@@ -109,9 +109,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span className="text-sm text-gray-400">
+                <a href="https://maps.app.goo.gl/yRxxiVmU7ui9e92f8" className="cursor-pointer hover:opacity-80 text-sm text-gray-400">
                   ISANO HOUSE, NEAR GAKINJIRO MARKET/GASABO/KACYITU
-                </span>
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />

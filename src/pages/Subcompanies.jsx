@@ -15,6 +15,7 @@ export default function Subcompanies() {
   const [activeItem, setActiveItem] = useState(null); // selected subcompany for hero
   const [filteredItems, setFilteredItems] = useState(slides); // items to display in grid
   const [activeTab, setActiveTab] = useState("All");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const selected = slides.find((item) => item.id === parseInt(id));
@@ -51,9 +52,10 @@ export default function Subcompanies() {
   };
 
   const handleLocationClick = () => {
-    const selected = slides.find((item) => item.id === id);
-    const navigate = useNavigate(selected.location);
-    window.location.pathname = navigate;
+    const selected = slides.find((item) => item.id === parseInt(id));
+    if (selected?.location) {
+      window.location.replace(selected.location);
+    }
   };
 
   // I added these to scroll to the top when we come to this page
