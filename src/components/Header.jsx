@@ -45,9 +45,9 @@ const Header = () => {
           
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex space-x-6 text-gray-700 pl-4 md:pr-14">
-            <a href="/" className="text-white bg-[#043A53] hover:rounded transition-all duration-300 py-3 px-2 md:px-4">
+            <NavLink to="/" className="text-white bg-[#043A53] hover:rounded transition-all duration-300 py-3 px-2 md:px-4">
               Home
-            </a>
+            </NavLink>
             <a href="#about" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
               About Us
             </a>
@@ -110,13 +110,13 @@ const Header = () => {
               </div>
               
               <div className="flex flex-col mt-4">
-                <a 
-                  href="/" 
+                <NavLink 
+                  to="/" 
                   className="py-3 px-6 text-white bg-[#043A53] border-b border-gray-100 transition-colors"
                   onClick={toggleMenu}
                 >
                   Home
-                </a>
+                </NavLink>
                 <a 
                   href="#about" 
                   className="py-3 px-6 hover:bg-gray-100 border-b border-gray-100 transition-colors"
