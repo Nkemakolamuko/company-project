@@ -45,7 +45,7 @@ const Header = () => {
           
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex space-x-6 text-gray-700 pl-4 md:pr-14">
-            <a href="/" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
+            <a href="/" className="text-white bg-[#043A53] hover:rounded transition-all duration-300 py-3 px-2 md:px-4">
               Home
             </a>
             <a href="#about" className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4">
@@ -59,7 +59,7 @@ const Header = () => {
             </a>
             <NavLink
               to="/contact"
-              className="hover:text-white hover:bg-[#043A53] transition-all duration-300 py-3 px-2 md:px-4"
+              className="text-white bg-[#043A53] hover:rounded transition-all duration-300 py-3 px-2 md:px-4"
             >
               Contact Us
             </NavLink>
@@ -112,7 +112,7 @@ const Header = () => {
               <div className="flex flex-col mt-4">
                 <a 
                   href="/" 
-                  className="py-3 px-6 hover:bg-gray-100 border-b border-gray-100 transition-colors"
+                  className="py-3 px-6 text-white bg-[#043A53] border-b border-gray-100 transition-colors"
                   onClick={toggleMenu}
                 >
                   Home
@@ -140,7 +140,7 @@ const Header = () => {
                 </a>
                 <NavLink
                   to="/contact"
-                  className="py-3 px-6 hover:bg-gray-100 border-b border-gray-100 transition-colors"
+                  className="py-3 px-6 bg-[#043A53] text-white border-b border-gray-100 transition-colors"
                   onClick={toggleMenu}
                 >
                   Contact Us
