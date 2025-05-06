@@ -24,6 +24,7 @@ export default function Subcompanies() {
       setFilteredItems([selected]); // only show the selected item
       setActiveTab(selected.title);
     } else {
+      setActiveItem(slides[0]); // Set default active item when no ID is provided
       setFilteredItems(slides);
       setActiveTab("All");
     }
@@ -34,10 +35,12 @@ export default function Subcompanies() {
     setActiveTab(tabTitle);
     if (tabTitle === "All") {
       setFilteredItems(slides);
+      navigate("/learn-more/0"); // Remove ID from URL when showing all
     } else {
       const filtered = slides.filter((item) => item.title === tabTitle);
       setFilteredItems(filtered);
       setActiveItem(filtered[0]); // update hero section
+      navigate(`/learn-more/${filtered[0].id}`); // Update URL with selected ID
     }
   };
 
@@ -48,13 +51,15 @@ export default function Subcompanies() {
       setActiveItem(selected);
       setActiveTab(selected.title);
       setFilteredItems([selected]);
+      navigate(`/learn-more/${id}`); // Update URL with selected ID
     }
   };
 
   const handleLocationClick = () => {
     const selected = slides.find((item) => item.id === parseInt(id));
     if (selected?.location) {
-      window.location.replace(selected.location);
+      // window.location.replace(selected.location);
+      window.open(selected.location, "_blank");
     }
   };
 
@@ -64,56 +69,63 @@ export default function Subcompanies() {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [id]);
 
+  // Handle case where data is still loading
+  if (!activeItem) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="bg-white" ref={topRef}>
-        {activeItem && (
-          <>
-            <HeroSection
-              title={
-                activeTab === "All"
-                  ? "Our Solutions which we are happy to show you"
-                  : activeItem?.title
-              }
-              description={
-                activeTab === "All"
-                  ? "We've made it for many times and grown many businesses. Many more to come."
-                  : activeItem?.desc
-              }
-              img={activeItem?.img}
-            />
+        <HeroSection
+          title={
+            activeTab === "All"
+              ? "Our Solutions which we are happy to show you"
+              : activeItem?.title
+          }
+          description={
+            activeTab === "All"
+              ? "We've made it for many times and grown many businesses. Many more to come."
+              : activeItem?.desc
+          }
+          img={activeItem?.img}
+        />
 
-            <Tabs
-              items={slides.map((item) => item.title)}
-              activeTab={activeTab}
-              onTabClick={handleTabClick}
-            />
-            <AnimatePresence mode="wait">
-              {activeTab === "All" ? (
-                <motion.div
-                  key="grid"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <ProjectGrid items={filteredItems} setId={handleCardClick} />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="detail"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <ProjectGrids
-                    item={activeItem}
-                    handleLocationCLick={handleLocationClick}
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </>
-        )}
+        <Tabs
+          items={slides.map((item) => item.title)}
+          activeTab={activeTab}
+          onTabClick={handleTabClick}
+        />
+        <AnimatePresence mode="wait">
+          {activeTab === "All" ? (
+            <motion.div
+              key="grid"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <ProjectGrid items={filteredItems} setId={handleCardClick} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="detail"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <ProjectGrids
+                item={activeItem}
+                handleLocationCLick={handleLocationClick}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div className="w-full flex items-center justify-center mt-4 mb-8">

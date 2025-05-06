@@ -5,23 +5,23 @@ const CompanyInfoSection = () => {
     {
       label: "About Us",
       href: "#about",
-      text: "We are a leading manufacturer in East Africa, focused on delivering sustainable and eco-friendly paper products to the market."
+      text: "We are a leading manufacturer in East Africa, focused on delivering sustainable and eco-friendly paper products to the market.",
     },
     {
       label: "Our Mission",
       href: "#mission",
-      text: "Our mission is to revolutionize the paper industry with innovation, quality, and environmental consciousness."
+      text: "Our mission is to revolutionize the paper industry with innovation, quality, and environmental consciousness.",
     },
     {
       label: "Our Vision",
       href: "#vision",
-      text: "We envision a world where recycled materials power the paper industry, reducing deforestation globally."
+      text: "We envision a world where recycled materials power the paper industry, reducing deforestation globally.",
     },
     {
       label: "Our Values",
       href: "#values",
-      text: "Integrity, sustainability, and excellence guide all our business decisions and community interactions."
-    }
+      text: "Integrity, sustainability, and excellence guide all our business decisions and community interactions.",
+    },
   ];
 
   return (
@@ -29,7 +29,10 @@ const CompanyInfoSection = () => {
       {/* Desktop Layout */}
       <div className="hidden md:grid md:grid-cols-2 md:grid-rows-2 text-center text-gray-700 px-4 md:px-10">
         {items.map((item, i) => (
-          <div key={i} className="p-12 flex items-center justify-center text-start hover:z-50 bg-white hover:bg-white/80 transition-all duration-300 border border-gray-100">
+          <div
+            key={i}
+            className="p-12 flex items-center justify-center text-start hover:z-50 bg-white hover:bg-white/95 transition-all duration-300 border border-gray-100"
+          >
             <p>{item.text}</p>
           </div>
         ))}
@@ -38,8 +41,11 @@ const CompanyInfoSection = () => {
       {/* Mobile Layout */}
       <div className="flex flex-col md:hidden text-gray-700 px-0">
         {items.map((item, i) => (
-          <div key={i} className="relative mb-4 bg-white hover:bg-white/80 transition-all duration-300 border border-gray-100">
-            <a 
+          <div
+            key={i}
+            className="relative mb-4 bg-white hover:bg-white/95 transition-all duration-300 border border-gray-100"
+          >
+            <a
               href={item.href}
               className="absolute top-0 right-0 bg-yellow-400 text-[#043A53] font-bold py-2 px-4 hover:bg-yellow-500 text-sm transition duration-300"
             >
