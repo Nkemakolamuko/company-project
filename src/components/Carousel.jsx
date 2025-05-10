@@ -120,9 +120,9 @@ const ModernHardwareCarousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden h-[120vh] md:h-[89vh] md:max-h-screen w-full group bg-zinc-900">
+    <div className="relative overflow-hidden h-[135vh] md:h-[89vh] md:max-h-screen w-full group bg-zinc-900">
       {/* Language welcome text */}
-      <div className="absolute top-16 md:top-14 left-6 md:left-12 z-50">
+      <div className="absolute top-6 md:top-14 left-6 md:left-12 z-50">
         <div
           className={`text-amber-400 font-bold text-xl md:text-4xl transition-all duration-700 ${
             welcomeVisible
@@ -135,7 +135,7 @@ const ModernHardwareCarousel = () => {
       </div>
 
       {/* Company identity banner */}
-      <div className="absolute top-24 md:top-24 left-6 md:left-12 right-6 md:right-12 z-50">
+      <div className="absolute top-14 md:top-24 left-6 md:left-12 right-6 md:right-12 z-50">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 bg-zinc-900/85 backdrop-blur-md px-4 py-3 md:px-8 md:py-6 rounded-lg border-l-4 border-amber-400 shadow-xl">
           <div className="flex items-center">
             <div className="bg-amber-400 p-2 md:p-3 rounded-md mr-3">
@@ -253,7 +253,7 @@ const ModernHardwareCarousel = () => {
 
               {/* Slide content */}
               <div
-                className={`absolute bottom-16 md:bottom-24 left-1/2 -translate-x-1/2 w-11/12 md:w-4/5 max-w-6xl transition-all duration-700 ${
+                className={`absolute bottom-36 md:bottom-24 left-1/2 -translate-x-1/2 w-11/12 md:w-4/5 max-w-6xl transition-all duration-700 ${
                   isTransitioning
                     ? "opacity-0 translate-y-8"
                     : "opacity-100 translate-y-0"
@@ -327,12 +327,11 @@ const ModernHardwareCarousel = () => {
                           </span>
                         </div>
 
-                        <Link
-                          to={`/learn-more/${slide.id}`}
-                          className="pl-10 cursor-pointer"
-                        >
-                          <button className="flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-zinc-900 font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md transition-all">
-                            <span>View {slide.title} Details</span>
+                        <Link to={`/learn-more/${slide.id}`} className="pl-10">
+                          <button className="flex cursor-pointer items-center gap-2 bg-amber-400 hover:bg-amber-500 text-zinc-900 font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md transition-all">
+                            <span className="text-nowrap text-sm md:text-base">
+                              View {slide.title} Details
+                            </span>
                             <ArrowRight className="w-4 h-4" />
                           </button>
                         </Link>
