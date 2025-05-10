@@ -14,8 +14,8 @@ const LandingPage = () => {
       <Divider />
       <CompanyInfo />
       <OurServices />
-      <Divider />
-      <TeamSection />
+      {/* <Divider /> */}
+      {/* <TeamSection /> */}
       <Newsletter />
       <Footer />
     </div>
