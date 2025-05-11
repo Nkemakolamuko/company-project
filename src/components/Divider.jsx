@@ -3,7 +3,7 @@ import image from "../assets/divider.png";
 
 const Divider = () => {
   return (
-    <div className="w-full">
+    <div className="w-full sm:hidden">
       {/* <img src={image} className='w-[95%] mx-auto h-16 md:h-full opacity-80' alt="Divider" /> */}
       <svg
         className="sm:hidden inline-block"
