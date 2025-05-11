@@ -120,7 +120,7 @@ const ModernHardwareCarousel = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden h-[120vh] md:h-[89vh] md:max-h-screen w-full group bg-zinc-900">
+    <div className="relative overflow-hidden h-[120vh] md:h-[87vh] md:max-h-screen w-full group bg-zinc-900">
       {/* Language welcome text */}
       <div className="absolute top-6 md:top-14 left-6 md:left-12 z-50">
         <div
