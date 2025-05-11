@@ -122,7 +122,7 @@ const ModernHardwareCarousel = () => {
   return (
     <div className="relative overflow-hidden h-[120vh] md:h-[87vh] md:max-h-screen w-full group bg-zinc-900">
       {/* Language welcome text */}
-      <div className="absolute top-6 md:top-14 left-6 md:left-12 z-50">
+      <div className="absolute top-6 md:top-10 left-6 md:left-12 z-50">
         <div
           className={`text-amber-400 font-bold text-xl md:text-4xl transition-all duration-700 ${
             welcomeVisible
