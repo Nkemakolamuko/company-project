@@ -68,7 +68,7 @@ const Header = () => {
 
       {/* Main Header - Becomes sticky on scroll */}
       <header
-        className={`w-full z-50 sticky top-0 transition-all duration-300 ${
+        className={`w-full z-[999] sticky top-0 transition-all duration-300 ${
           scrolled ? "bg-white shadow-lg py-2" : "bg-white py-4"
         }`}
       >
