@@ -369,7 +369,7 @@ const ModernHardwareCarousel = () => {
       </div>
 
       {/* Navigation arrows */}
-      <div className="absolute inset-y-0 left-0 right-0 flex md:items-center top-76 justify-between pointer-events-none z-[99] px-4 md:px-8">
+      <div className="absolute inset-y-0 left-0 right-0 flex md:items-center top-68 justify-between pointer-events-none z-[99] px-4 md:px-8">
         <button
           onClick={() => handleSlideChange("prev")}
           className="bg-zinc-900/40 hover:bg-zinc-900/80 w-fit h-fit cursor-pointer backdrop-blur-sm border border-white text-white p-4 rounded-full pointer-events-auto transition-all"
