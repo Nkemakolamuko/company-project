@@ -130,7 +130,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-[100] lg:hidden">
+        <div className="fixed inset-0 lg:hidden z-[9999]">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-zinc-900 opacity-50"
