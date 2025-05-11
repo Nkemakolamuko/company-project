@@ -120,9 +120,9 @@ const ModernHardwareCarousel = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden h-[120vh] md:h-[87vh] md:max-h-screen w-full group bg-zinc-900">
+    <div className="relative overflow-hidden h-[120vh] md:h-[89vh] md:max-h-screen w-full group bg-zinc-900">
       {/* Language welcome text */}
-      <div className="absolute top-6 md:top-10 left-6 md:left-12 z-50">
+      <div className="absolute top-6 md:top-14 left-6 md:left-12 z-50">
         <div
           className={`text-amber-400 font-bold text-xl md:text-4xl transition-all duration-700 ${
             welcomeVisible
@@ -369,7 +369,7 @@ const ModernHardwareCarousel = () => {
       </div>
 
       {/* Navigation arrows */}
-      <div className="absolute inset-y-0 left-0 right-0 flex md:items-center top-68 justify-between pointer-events-none z-[99] px-4 md:px-8">
+      <div className="absolute inset-y-0 left-0 right-0 flex md:items-center top-76 md:top-68 justify-between pointer-events-none z-[99] px-4 md:px-8">
         <button
           onClick={() => handleSlideChange("prev")}
           className="bg-zinc-900/40 hover:bg-zinc-900/80 w-fit h-fit cursor-pointer backdrop-blur-sm border border-white text-white p-4 rounded-full pointer-events-auto transition-all"
@@ -387,7 +387,7 @@ const ModernHardwareCarousel = () => {
       </div>
 
       {/* Business highlights banner */}
-      <div className="absolute bottom-4 left-0 right-0 z-60 px-4 md:px-12">
+      <div className="absolute bottom-4 left-0 right-0 z-30 px-4 md:px-12">
         <div className="bg-zinc-900/90 backdrop-blur-sm rounded-lg p-2 md:p-0 border border-zinc-800">
           <div className="flex flex-wrap md:flex-nowrap justify-center items-center divide-y md:divide-y-0 md:divide-x divide-zinc-700">
             <div className="flex items-center justify-center p-2 md:p-4 w-1/2 md:w-auto">
