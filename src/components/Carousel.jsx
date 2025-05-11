@@ -387,7 +387,7 @@ const ModernHardwareCarousel = () => {
       </div>
 
       {/* Business highlights banner */}
-      <div className="absolute bottom-4 left-0 right-0 z-30 px-4 md:px-12">
+      <div className="absolute bottom-4 left-0 right-0 z-60 px-4 md:px-12">
         <div className="bg-zinc-900/90 backdrop-blur-sm rounded-lg p-2 md:p-0 border border-zinc-800">
           <div className="flex flex-wrap md:flex-nowrap justify-center items-center divide-y md:divide-y-0 md:divide-x divide-zinc-700">
             <div className="flex items-center justify-center p-2 md:p-4 w-1/2 md:w-auto">
