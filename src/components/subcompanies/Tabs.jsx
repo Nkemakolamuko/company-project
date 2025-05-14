@@ -1,29 +1,65 @@
+"use client";
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 export default function Tabs({ items, onTabClick, activeTab }) {
+  const tabsRef = useRef(null);
+
+  const scrollTabs = (direction) => {
+    if (tabsRef.current) {
+      tabsRef.current.scrollBy({
+        left: direction === "left" ? -200 : 200,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="flex flex-wrap justify-center gap-4 py-6">
+    <div className="relative w-full container mx-auto px-4">
+      {/* Scroll buttons */}
       <button
-        onClick={() => onTabClick("All")}
-        className={`px-4 py-2 rounded-full text-sm cursor-pointer transition-all duration-300 ${
-          activeTab === "All"
-            ? "bg-gray-800 text-white"
-            : "bg-gray-200 hover:bg-gray-800 hover:text-white"
-        }`}
+        onClick={() => scrollTabs("left")}
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-amber-400 text-white cursor-pointer shadow-xl rounded-full hidden md:flex"
       >
-        All
+        <ChevronLeft size={20} />
       </button>
-      {items.map((item, idx) => (
+      <button
+        onClick={() => scrollTabs("right")}
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-amber-400 text-white cursor-pointer shadow-xl rounded-full hidden md:flex"
+      >
+        <ChevronRight size={20} />
+      </button>
+
+      {/* Tab List */}
+      <div
+        className="flex items-center overflow-x-auto gap-4 py-6 px-4 scrollbar-hide"
+        ref={tabsRef}
+        id="tabs"
+      >
         <button
-          key={idx}
-          onClick={() => onTabClick(item)}
-          className={`px-4 py-2 rounded-full text-xs cursor-pointer transition-all duration-300 ${
-            activeTab === item
+          onClick={() => onTabClick("All")}
+          className={`px-6 py-2 rounded-full text-sm cursor-pointer transition-all duration-300 ${
+            activeTab === "All"
               ? "bg-gray-800 text-white"
               : "bg-gray-200 hover:bg-gray-800 hover:text-white"
           }`}
         >
-          {item}
+          All
         </button>
-      ))}
+        {items.map((item, idx) => (
+          <button
+            key={idx}
+            onClick={() => onTabClick(item)}
+            className={`px-4 py-2 rounded-full text-nowrap text-xs cursor-pointer transition-all duration-300 ${
+              activeTab === item
+                ? "bg-gray-800 text-white"
+                : "bg-gray-200 hover:bg-gray-800 hover:text-white"
+            }`}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

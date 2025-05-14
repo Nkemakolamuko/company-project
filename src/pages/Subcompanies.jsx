@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import HeroSection from "../components/subcompanies/HeroSection";
 import Tabs from "../components/subcompanies/Tabs";
@@ -68,6 +68,11 @@ export default function Subcompanies() {
   useEffect(() => {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [id]);
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
 
   // Handle case where data is still loading
   if (!activeItem) {

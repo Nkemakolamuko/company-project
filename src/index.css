@@ -1,1 +1,9 @@
-@import 'tailwindcss'
+@import "tailwindcss";
+
+#tabs {
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+}
+#tabs::-webkit-scrollbar {
+  display: none;
+}

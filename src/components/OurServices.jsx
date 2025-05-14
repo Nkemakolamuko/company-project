@@ -8,7 +8,7 @@ const OurServices = () => {
   return (
     <section className="py-16 px-4 md:px-16 bg-white" id="sub">
       <div className="flex justify-between items-center mb-6">
-        <Title text1={"OUR"} text2={"SERVICES"} />
+        <Title text1={"OUR"} text2={"PRODUCTS"} />
         {/* The commented out code below is for moving the cards in a carousel format    */}
         {/* <div className="inset-0 flex items-center px-2 md:px-8 pointer-events-none mb-3 md:mb-10 gap-2">
           <button
