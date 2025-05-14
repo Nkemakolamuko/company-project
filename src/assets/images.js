@@ -16,8 +16,8 @@ import fuse3 from "./images/fuses3.WebP";
 import fuse4 from "./images/fuses4.WebP";
 
 import gen1 from "./images/generator.webp";
-import gen2 from "./images/generator2.webp";
-import gen3 from "./images/generator3.webp";
+import gen2 from "./images/generator2.Webp";
+import gen3 from "./images/generator3.Webp";
 
 import inverter from "./images/inverter.WebP";
 import inverter1 from "./images/inverter1.WebP";
