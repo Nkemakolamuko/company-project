@@ -24,10 +24,10 @@ import inverter1 from "./images/inverter1.WebP";
 import inverter2 from "./images/inverter2.WebP";
 
 import led from "./images/led-panel.WebP";
-import led1 from "./images/led-panel1.WebP";
-import led2 from "./images/led-panel2.WebP";
-import led3 from "./images/led-panel3.WebP";
-import led4 from "./images/led-panel4.WebP";
+import led1 from "./images/LED-panel1.WebP";
+import led2 from "./images/LED-panel2.WebP";
+import led3 from "./images/LED-panel3.WebP";
+import led4 from "./images/LED-panel4.WebP";
 
 import meterClamp1 from "./images/meter-clamp1.WebP";
 import meterClamp2 from "./images/meter-clamp2.WebP";
