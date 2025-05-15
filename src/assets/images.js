@@ -40,16 +40,50 @@ import waterPump3 from "./images/water-pump4.WebP";
 import waterPump4 from "./images/water-pump5.WebP";
 import waterPump5 from "./images/water-pump6.WebP";
 
-import fireAlarm1 from "./images/Fire-alarm-control-panel1.webp";
-import fireAlarm2 from "./images/Fire-alarm-control-panel2.webp";
-import fireAlarm3 from "./images/Fire-alarm-control-panel3.webp";
-import fireAlarm4 from "./images/Fire-alarm-control-panel4.webp";
+// import fireAlarm1 from "./images/Fire-alarm-control-panel1.webp";
+// import fireAlarm2 from "./images/Fire-alarm-control-panel2.webp";
+// import fireAlarm3 from "./images/Fire-alarm-control-panel3.webp";
+// import fireAlarm4 from "./images/Fire-alarm-control-panel4.webp";
 
 import heatDetector from "./images/heat-detector2.webp";
 import smokeDetector1 from "./images/smoke-detector1.webp";
 import smokeDetector2 from "./images/smoke-detector2.webp";
 import smokeDetector3 from "./images/smoke-detector3.webp";
 import smokeDetector4 from "./images/smoke-detector4.webp";
+
+import pipe1 from "./images/pipes1.webp";
+import pipe2 from "./images/pipes2.webp";
+import pipe3 from "./images/pipes3.webp";
+import pipe4 from "./images/pipes4.webp";
+import pipe5 from "./images/pipes5.webp";
+import pipe6 from "./images/pipes6.webp";
+import pipe7 from "./images/pipes7.webp";
+
+import callPoint1 from "./images/call-point.webp";
+import callPoint2 from "./images/call-point2.webp";
+import callPoint3 from "./images/call-point3.webp";
+import callPoint4 from "./images/call-point4.webp";
+import callPoint5 from "./images/call-point5.webp";
+import callPoint6 from "./images/call-point6.webp";
+
+import FAC1 from "./images/FAC1.webp";
+import FAC2 from "./images/FAC2.webp";
+import FAC3 from "./images/FAC3.webp";
+import FAC4 from "./images/FAC4.webp";
+
+import fireBlanket1 from "./images/fire-blanket1.webp";
+import fireBlanket2 from "./images/fire-blanket2.webp";
+import fireBlanket3 from "./images/fire-blanket3.webp";
+import fireBlanket4 from "./images/fire-blanket5.webp";
+
+import fireHydrant1 from "./images/fire-hydrant1.webp";
+import fireHydrant2 from "./images/fire-hydrant2.webp";
+import fireHydrant3 from "./images/fire-hydrant3.webp";
+
+import firstAid1 from "./images/first-aid-box1.webp";
+import firstAid2 from "./images/first-aid-box2.webp";
+import firstAid3 from "./images/first-aid-box3.webp";
+import firstAid4 from "./images/first-aid-box4.webp";
 
 export const images = {
   boiteConnection1,
@@ -85,13 +119,41 @@ export const images = {
   waterPump3,
   waterPump4,
   waterPump5,
-  fireAlarm1,
-  fireAlarm2,
-  fireAlarm3,
-  fireAlarm4,
+  // fireAlarm1,
+  // fireAlarm2,
+  // fireAlarm3,
+  // fireAlarm4,
   heatDetector,
   smokeDetector1,
   smokeDetector2,
   smokeDetector3,
   smokeDetector4,
+  pipe1,
+  pipe2,
+  pipe3,
+  pipe4,
+  pipe5,
+  pipe6,
+  pipe7,
+  callPoint1,
+  callPoint2,
+  callPoint3,
+  callPoint4,
+  callPoint5,
+  callPoint6,
+  FAC1,
+  FAC2,
+  FAC3,
+  FAC4,
+  fireBlanket1,
+  fireBlanket2,
+  fireBlanket3,
+  fireBlanket4,
+  fireHydrant1,
+  fireHydrant2,
+  fireHydrant3,
+  firstAid1,
+  firstAid2,
+  firstAid3,
+  firstAid4,
 };

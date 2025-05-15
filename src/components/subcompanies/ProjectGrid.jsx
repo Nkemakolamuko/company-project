@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 export default function ProjectGrid({ items, setId }) {
-
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 md:max-w-3xl mx-auto gap-6 px-4 py-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 group overflow-hidden lg:grid-cols-2 md:max-w-3xl mx-auto gap-6 px-4 py-8">
       {items.map((item) => (
         <div
           onClick={() => setId(item.id)}
@@ -13,7 +12,7 @@ export default function ProjectGrid({ items, setId }) {
           <img
             src={item.img}
             alt={item.title}
-            className="w-full h-48 object-cover"
+            className="w-full h-48 group-hover:scale-105 transition-all duration-300 object-cover"
           />
           <div className="p-4">
             <h3 className="font-semibold">{item.title}</h3>

@@ -154,19 +154,14 @@ const slides = [
   },
   {
     id: 12,
-    img: images.fireAlarm1,
-    images: [
-      images.fireAlarm1,
-      images.fireAlarm2,
-      images.fireAlarm3,
-      images.fireAlarm4,
-    ],
+    img: images.FAC1,
+    images: [images.FAC1, images.FAC2, images.FAC3, images.FAC4],
     title: "Fire Alarm Control Panels",
-    desc: "Advanced fire alarm control panels for enhanced safety.",
+    desc: "High-performance fire alarm control panels for reliable fire safety.",
     badgeColor: "bg-yellow-400",
     location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
     longDesc:
-      "We provide advanced fire alarm control panels for enhanced safety. Our control panels are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
+      "We offer high-performance fire alarm control panels for reliable fire safety. Our control panels are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
   },
   {
     id: 13,
@@ -184,6 +179,86 @@ const slides = [
     location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
     longDesc:
       "We provide advanced smoke and heat detectors for enhanced safety. Our detectors are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
+  },
+  {
+    id: 14,
+    img: images.pipe1,
+    images: [
+      images.pipe1,
+      images.pipe2,
+      images.pipe3,
+      images.pipe4,
+      images.pipe5,
+      images.pipe6,
+      images.pipe7,
+    ],
+    title: "PVC Pipes",
+    desc: "High-performance PVC pipes for reliable water supply.",
+    badgeColor: "bg-yellow-400",
+    location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
+    longDesc:
+      "We provide high-performance PVC pipes for reliable water supply. Our pipes are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
+  },
+  {
+    id: 15,
+    img: images.callPoint1,
+    images: [
+      images.callPoint1,
+      images.callPoint2,
+      images.callPoint3,
+      images.callPoint4,
+      images.callPoint5,
+      images.callPoint6,
+    ],
+    title: "Call Points",
+    desc: "High-performance call points for reliable fire safety.",
+    badgeColor: "bg-gray-800",
+    location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
+    longDesc:
+      "We provide high-performance call points for reliable fire safety. Our call points are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
+  },
+  {
+    id: 16,
+    img: images.fireBlanket1,
+    images: [
+      images.fireBlanket1,
+      images.fireBlanket2,
+      images.fireBlanket3,
+      images.fireBlanket4,
+    ],
+    title: "Fire Blankets",
+    desc: "High-performance fire blankets for reliable fire safety.",
+    badgeColor: "bg-gray-800",
+    location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
+    longDesc:
+      "We offer high-performance fire blankets for reliable fire safety. Our fire blankets are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
+  },
+  {
+    id: 17,
+    img: images.fireHydrant1,
+    images: [images.fireHydrant1, images.fireHydrant2, images.fireHydrant3],
+    title: "Fire Hydrants",
+    desc: "High-performance fire hydrants for reliable fire safety.",
+    badgeColor: "bg-yellow-400",
+    location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
+    longDesc:
+      "We provide high-performance fire hydrants for reliable fire safety. Our fire hydrants are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
+  },
+  {
+    id: 18,
+    img: images.firstAid1,
+    images: [
+      images.firstAid1,
+      images.firstAid2,
+      images.firstAid3,
+      images.firstAid4,
+    ],
+    title: "First Aid Kits",
+    desc: "High-performance first aid kits for reliable emergency care.",
+    badgeColor: "bg-gray-800",
+    location: "https://maps.app.goo.gl/qmU3uoG5YBbq8nLS9",
+    longDesc:
+      "We provide high-performance first aid kits for reliable emergency care. Our first aid kits are designed for high performance and durability, ensuring consistent operation even in challenging conditions. With advanced features for efficiency and ease of use, they are the ideal choice for demanding environments.",
   },
 ];
 

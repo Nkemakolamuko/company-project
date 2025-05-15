@@ -32,13 +32,13 @@ const OurServices = () => {
         {slides.map((service) => (
           <div
             key={service.id}
-            className="bg-white rounded shadow hover:shadow-md overflow-hidden transition-all duration-200"
+            className="bg-white rounded group shadow hover:shadow-md overflow-hidden transition-all duration-200"
           >
             <div className="relative h-48">
               <img
                 src={service.img}
                 alt={service.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full group-hover:scale-105 transition-all duration-300 object-cover"
               />
               <div
                 className={`absolute top-4 left-4 px-4 py-1 text-white text-sm font-semibold rounded ${service.badgeColor}`}

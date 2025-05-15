@@ -14,25 +14,25 @@ export default function Newsletter() {
     const handleScroll = () => {
       const section = sectionRef.current;
       if (!section) return;
-      
+
       const rect = section.getBoundingClientRect();
       const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-      
+
       if (isVisible) {
         // When the section is in view, apply fixed background
-        section.classList.add('bg-fixed');
+        section.classList.add("bg-fixed");
       } else {
         // When scrolled past, remove fixed background
-        section.classList.remove('bg-fixed');
+        section.classList.remove("bg-fixed");
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     // Initial check
     handleScroll();
-    
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -73,7 +73,7 @@ export default function Newsletter() {
   };
 
   return (
-    <div 
+    <div
       ref={sectionRef}
       className="max-w-full relative mx-auto bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3c2xldHRlcnxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center bg-no-repeat px-4 md:px-8 py-20 min-h-[400px] transition-all duration-300"
     >
@@ -81,7 +81,7 @@ export default function Newsletter() {
 
       <div className="relative z-20 bg-white p-6 rounded shadow-md max-w-3xl mx-auto flex flex-col">
         <div className="flex items-center mb-4">
-          <div className="bg-blue-400 rounded-full p-4 mr-4">
+          <div className="bg-amber-400 rounded-full p-4 mr-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8 text-white"
@@ -98,14 +98,14 @@ export default function Newsletter() {
             </svg>
           </div>
 
-          <h3 className="text-2xl md:text-4xl font-semibold text-blue-500">
+          <h3 className="text-2xl md:text-4xl font-semibold text-amber-500">
             Subscribe to our newsletter
           </h3>
         </div>
 
         <p className="text-gray-600 mb-6">
-          Do You Want To Know What Our Other Customers Don't Know? Then Join Our
-          Newsletter To Get Updates On Our Latest Products.
+          Do you want to know what our other customers don't know? Then join our
+          newsletter to get updates on our latest products.
         </p>
 
         {submitStatus === "success" ? (
@@ -189,7 +189,7 @@ export default function Newsletter() {
           </div>
         </form>
       </div>
-      
+
       {/* Add custom styles for the fixed background effect */}
       <style jsx global>{`
         .bg-fixed {

@@ -1,9 +1,10 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Tabs({ items, onTabClick, activeTab }) {
   const tabsRef = useRef(null);
+  const tabRefs = useRef({}); // Create object to hold refs for each tab
 
   const scrollTabs = (direction) => {
     if (tabsRef.current) {
@@ -13,6 +14,17 @@ export default function Tabs({ items, onTabClick, activeTab }) {
       });
     }
   };
+
+  useEffect(() => {
+    const currentTab = tabRefs.current[activeTab];
+    if (currentTab && currentTab.scrollIntoView) {
+      currentTab.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [activeTab]);
 
   return (
     <div className="relative w-full container mx-auto px-4">
@@ -37,6 +49,7 @@ export default function Tabs({ items, onTabClick, activeTab }) {
         id="tabs"
       >
         <button
+          ref={(el) => (tabRefs.current["All"] = el)}
           onClick={() => onTabClick("All")}
           className={`px-6 py-2 rounded-full text-sm cursor-pointer transition-all duration-300 ${
             activeTab === "All"
@@ -49,6 +62,7 @@ export default function Tabs({ items, onTabClick, activeTab }) {
         {items.map((item, idx) => (
           <button
             key={idx}
+            ref={(el) => (tabRefs.current[item] = el)}
             onClick={() => onTabClick(item)}
             className={`px-4 py-2 rounded-full text-nowrap text-xs cursor-pointer transition-all duration-300 ${
               activeTab === item

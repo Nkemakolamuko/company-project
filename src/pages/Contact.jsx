@@ -1,11 +1,63 @@
 import { MapPin, Phone } from "lucide-react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { MdEmail, MdTextFields } from "react-icons/md";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errMsg, setErrMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+
+  const formspreeEndpoint = "https://formspree.io/f/xanoarvn";
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSuccessMsg("");
+      setErrMsg("");
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [successMsg, errMsg, email, name, phoneNumber, message]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          // email,
+          phoneNumber,
+          message,
+        }),
+      });
+      if (response.ok) {
+        setSuccessMsg("Message sent successfully!");
+      } else {
+        setErrMsg("Error sending message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setErrMsg("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+      setName("");
+      setEmail("");
+      setPhoneNumber("");
+      setMessage("");
+    }
+  };
+
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -112,13 +164,15 @@ const Contact = () => {
 
             <hr className="mb-10 text-gray-100" />
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Name */}
                 <div className="flex items-center border border-gray-100 rounded-lg px-4 py-2 bg-white focus-within:ring-2 focus-within:ring-blue-600">
                   <MdEmail className="text-gray-400 mr-3" />
                   <input
                     type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Your Name"
                     className="w-full focus:outline-none bg-transparent"
                   />
@@ -129,6 +183,8 @@ const Contact = () => {
                   <MdEmail className="text-gray-400 mr-3" />
                   <input
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email Address"
                     className="w-full focus:outline-none bg-transparent"
                   />
@@ -151,6 +207,8 @@ const Contact = () => {
                   <Phone className="text-gray-400 mr-3" />
                   <input
                     type="tel"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                     placeholder="Contact Number"
                     className="w-full focus:outline-none bg-transparent"
                   />
@@ -164,6 +222,8 @@ const Contact = () => {
                   placeholder="How can we help?"
                   rows="4"
                   cols="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full focus:outline-none bg-transparent resize-none"
                 ></textarea>
               </div>
@@ -178,11 +238,50 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="bg-[#043A53] text-white py-2 px-4 md:px-8 cursor-pointer rounded hover:bg-[#032c3f] transition-colors duration-300"
+                  disabled={isSubmitting}
+                  className={`flex items-center justify-center ${
+                    isSubmitting ? "bg-gray-300" : "bg-[#043A53]"
+                  } text-white py-2 px-4 md:px-8 cursor-pointer rounded hover:bg-[#032c3f] transition-colors duration-300`}
                 >
-                  Submit
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-between gap-2">
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 1 1 16 0A8 8 0 0 1 4 12zm2.5-1h9a2.5 2.5 0 1 1-9 0z"
+                        ></path>
+                      </svg>
+                      <span className="ml-2">Sending...</span>
+                    </div>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </div>
+              {errMsg && (
+                <div className="text-red-500 bg-red-100 py-2 px-4 rounded text-center mt-4">
+                  {errMsg}
+                </div>
+              )}
+              {successMsg && (
+                <div className="text-green-500 bg-green-100 py-2 px-4 rounded text-center mt-4">
+                  {successMsg}
+                </div>
+              )}
             </form>
           </div>
         </div>
