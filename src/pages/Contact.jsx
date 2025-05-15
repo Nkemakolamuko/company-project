@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { MdEmail, MdTextFields } from "react-icons/md";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const { pathname } = useLocation();
@@ -11,7 +12,14 @@ const Contact = () => {
   }, [pathname]);
   return (
     <div className="min-h-screen bg-gray-50">
-      {" "}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact Page</title>
+        <link
+          rel="canonical"
+          href={`https://company-project-loug.vercel.app/contact`}
+        />
+      </Helmet>{" "}
       {/* Added pt-[120px] for header space - I removed it, I don't think it's good visually though */}
       {/* Contact Section */}
       <div className="w-full pb-8 md:py-16 relative">

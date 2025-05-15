@@ -9,6 +9,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import ProjectGrids from "../components/subcompanies/ProjectGrids";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 export default function Subcompanies() {
   const { id } = useParams();
@@ -83,9 +84,19 @@ export default function Subcompanies() {
     );
   }
 
+  // document.title = `Subcompanies - ${activeItem.title}`; I'd use the react helmet for this
+
   return (
     <>
       <div className="bg-white" ref={topRef}>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Subproducts - {activeItem.title}</title>
+          <link
+            rel="canonical"
+            href={`https://company-project-loug.vercel.app/learn-more/${activeItem.id}`}
+          />
+        </Helmet>
         <HeroSection
           title={
             activeTab === "All"

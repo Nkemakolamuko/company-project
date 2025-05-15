@@ -6,10 +6,19 @@ import TeamSection from "../components/TeamSection";
 import Divider from "../components/Divider";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const LandingPage = () => {
   return (
     <div className="w-full overflow-hidden">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Parent Solution Group</title>
+        <link
+          rel="canonical"
+          href={`https://company-project-loug.vercel.app`}
+        />
+      </Helmet>
       <HeroSection />
       <Divider />
       <CompanyInfo />
